@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {DataContext} from "../context/DataContext";
+import '../styles/form.scss'
 
 export const SearchForm = () => {
     const [searchString, setSearchString] = useState(``);
@@ -10,9 +11,11 @@ export const SearchForm = () => {
         fetchData(searchString);
     };
     return (
-        <form onSubmit={formHandler}>
-            <input type="text" onChange={(e) => setSearchString(e.target.value)}/>
-            <button>Search</button>
-        </form>
+        <div className="search-wrapper">
+            <form onSubmit={formHandler}>
+                <input type="text" onChange={(e) => setSearchString(e.target.value)}/>
+                <button>Search</button>
+            </form>
+        </div>
     )
 }

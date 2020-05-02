@@ -7,8 +7,10 @@ import {ResultList} from "./components/ResultList";
 export const App = () => {
     return (
         <GetData>
-            <SearchForm/>
-            <ResultList/>
+            <div className="container">
+                <SearchForm/>
+                <ResultList/>
+            </div>
         </GetData>
     );
 }
