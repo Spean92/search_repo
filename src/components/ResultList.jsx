@@ -1,6 +1,7 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {DataContext} from "../context/DataContext";
 import {Elements} from "./Elements";
+import {Pagination} from "./Pagination";
 import "../styles/resultList.scss"
 
 export const ResultList = () => {
@@ -15,6 +16,8 @@ export const ResultList = () => {
                 ))}
             </div>
             }
+            {total_count > 30 &&
+            <Pagination/>}
         </div>
 
     )
