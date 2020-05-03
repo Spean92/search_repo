@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #333333;
+  color: #ffffff;
+  *::selection {
+    color: #fff;
+    background-color: #821300;
+  }
 }
 
 code {
@@ -16,6 +22,6 @@ code {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 10px;
   box-sizing: border-box;
+  padding: 65px 10px 100px 10px;
 }

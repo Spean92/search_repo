@@ -1,7 +1,7 @@
 import React from 'react';
 import {GetData} from "./context/GetData";
 import {SearchForm} from "./components/SearchForm";
-import {ResultList} from "./components/ResultList";
+import {Page} from "./components/Page";
 
 
 export const App = () => {
@@ -9,7 +9,7 @@ export const App = () => {
         <GetData>
             <div className="container">
                 <SearchForm/>
-                <ResultList/>
+                <Page/>
             </div>
         </GetData>
     );

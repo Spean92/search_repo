@@ -2,10 +2,13 @@
   display: flex;
   width: 100%;
   padding: 20px 0 10px 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #666666;
   animation: slide-up 0.4s ease;
+  &:last-child {
+    border-bottom: 1px solid #666;
+  }
   a {
-    color: #0366d6;
+    color: #00daff;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -33,7 +36,7 @@
     }
     > p {
       margin-bottom: 4px;
-      color: #24292e;
+      color: #f7f7f7;
       word-break: break-word;
     }
 
@@ -46,26 +49,28 @@
     bottom: 0;
     left: 0;
     vertical-align: middle;
-    color: #586069;
+    color: #999999;
     @media screen and (max-width: 500px){
       flex-wrap: wrap;
     }
     a {
       font-size: 12px;
       text-decoration: none;
-      color: #586069;
+      color: #fff905;
+      transition: all .250s ease;
       svg{
         margin-right: 5px;
         vertical-align: text-bottom;
         path {
-          fill: #586069;
+          fill: #fff905;
+          transition: all .250s ease;
         }
       }
       &:hover {
-        color: #0366d6;
+        color: #00daff;
         svg {
           path {
-            fill: #0366d6;
+            fill: #00daff;
           }
         }
       }

@@ -1,22 +1,20 @@
-import React, {useContext} from 'react';
-import {DataContext} from "../context/DataContext";
+import React from 'react';
 import {Elements} from "./Elements";
 import {Pagination} from "./Pagination";
 import {Loader} from "./Loader";
 import "../styles/resultList.scss"
 
-export const ResultList = () => {
-    const {loading, data: {data: {items, total_count}}} = useContext(DataContext);
+export const ResultList = ({loading, data: {items, total_count}}) => {
     return (
         <div className="result-wrapper">
-            <p>Total found - {total_count || 0} repository</p>
+            <p>Total found - <b>{total_count || 0}</b> repositories</p>
             {total_count > 1000 &&
-            <p>The GitHub Search API provides <b>maximum 1,000 results for search</b></p>
+            <p className="result-limit">Pagination limited because GitHub Search API provides first <b>1,000 results</b> for search</p>
             }
             {loading ?
                 <Loader/>
                 :
-                <React.Fragment>
+                <>
                     {items &&
                     <div>
                         {items.map(repos => (
@@ -24,7 +22,7 @@ export const ResultList = () => {
                         ))}
                     </div>
                     }
-                </React.Fragment>
+                </>
             }
             {total_count > 30 &&
             <Pagination/>
