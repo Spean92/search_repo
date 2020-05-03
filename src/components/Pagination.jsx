@@ -3,12 +3,12 @@ import {DataContext} from "../context/DataContext";
 import '../styles/pagination.scss';
 
 export const Pagination = () => {
-    const {data: {total_count}, currentPage, currentQuery, fetchData} = useContext(DataContext);
+    const {loading, data: {data: {total_count}, currentPage, currentQuery}, fetchData} = useContext(DataContext);
     const [page, setPage] = useState(1);
     const [pagination, setPagination] = useState([]);
 
     const changePageHandler = (e) => {
-        if (e.target.dataset.page) {
+        if (e.target.dataset.page && !loading) {
             fetchData(currentQuery, +e.target.dataset.page)
         }
     };

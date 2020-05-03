@@ -3,6 +3,7 @@
   width: 100%;
   padding: 20px 0 10px 0;
   border-top: 1px solid #eee;
+  animation: slide-up 0.4s ease;
   a {
     color: #0366d6;
     text-decoration: none;
@@ -75,5 +76,15 @@
         width: 100%;
       }
     }
+  }
+}
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
