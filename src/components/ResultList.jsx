@@ -9,6 +9,10 @@ export const ResultList = () => {
     return (
         <div className="result-wrapper">
             <p>Total found - {total_count || 0} repository</p>
+            {total_count > 1000 &&
+            <p>The GitHub Search API provides <b>maximum 1,000 results for search</b></p>
+            }
+
             {items &&
             <div>
                 {items.map(repos => (
