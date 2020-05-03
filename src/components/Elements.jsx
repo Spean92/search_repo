@@ -11,7 +11,7 @@ export const Elements = (props) => {
     return (
         <div className="element-wrapper">
             <div className="author-info">
-                <a href={author_url}>
+                <a href={author_url} target="_blank" rel="noopener noreferrer">
                     <div>
                         <img loading="lazy" width={100} height={100} src={avatar_url} alt={login}/>
                     </div>
@@ -19,9 +19,9 @@ export const Elements = (props) => {
                 </a>
             </div>
             <div className="repo-info">
-                <p><a href={html_url}>{full_name}</a></p>
+                <p><a href={html_url} target="_blank" rel="noopener noreferrer">{full_name}</a></p>
                 {homepage &&
-                <p><b>Homepage:</b> <a href={homepage}>{homepage}</a></p>
+                <p><b>Homepage:</b> <a href={homepage} target="_blank" rel="noopener noreferrer">{homepage}</a></p>
                 }
                 {description &&
                 <p><b>Description:</b> {description.length > 300 ? `${description.substring(0, 300)}...` : description}
@@ -31,7 +31,7 @@ export const Elements = (props) => {
                 <p><b>Language:</b> {language}</p>
                 }
                 <div className="bottom-info">
-                    <a href={stargazers_url}>
+                    <a href={stargazers_url} target="_blank" rel="noopener noreferrer">
                         <svg aria-label="star" className="octicon octicon-star" viewBox="0 0 14 16"
                              version="1.1"
                              width="14" height="16" role="img">
