@@ -6,7 +6,9 @@ export const Welcome = () => {
     const [cache, setCache] = useState(false);
 
     useEffect(() => {
-        caches.keys().then(k => k.indexOf(CACHE_NAME) !== -1 ? setCache(true) : null);
+        if(`caches` in window.self) {
+            caches.keys().then(k => k.indexOf(CACHE_NAME) !== -1 ? setCache(true): null);
+        }
     }, []);
 
     const clearHandler = (e) => {

@@ -13,7 +13,7 @@ export const Elements = (props) => {
             <div className="author-info">
                 <a href={author_url}>
                     <div>
-                        <img src={avatar_url} alt={login}/>
+                        <img loading="lazy" width={100} height={100} src={avatar_url} alt={login}/>
                     </div>
                     <p>{login}</p>
                 </a>

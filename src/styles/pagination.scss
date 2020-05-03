@@ -33,7 +33,7 @@
     @media screen and (max-width: 550px){
       &.page, &.gap {
         display: none;
-        &.current, &.first, &.last, &.prev, &.next {
+        &.current, &.first, &.last, &.prev, &.next, &:nth-child(2), &:nth-last-child(2) {
           display: inline-block;
         }
       }

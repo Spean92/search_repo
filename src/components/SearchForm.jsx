@@ -3,11 +3,13 @@ import {DataContext} from "../context/DataContext";
 import '../styles/form.scss'
 
 export const SearchForm = () => {
-    const {fetchData, data: {currentQuery}} = useContext(DataContext);
+    const {fetchData,loading: {errors}, data: {currentQuery}} = useContext(DataContext);
     const [searchString, setSearchString] = useState(``);
     const formHandler = (e) => {
         e.preventDefault();
-        if (searchString && searchString !== currentQuery) {
+        if ((searchString &&
+            searchString !== currentQuery) ||
+            errors) {
             fetchData(searchString);
         }
     };

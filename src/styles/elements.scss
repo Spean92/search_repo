@@ -32,7 +32,7 @@
     position: relative;
     padding-bottom: 25px;
     @media screen and (max-width: 500px){
-      padding-bottom: 40px;
+      padding-bottom: 10px;
     }
     > p {
       margin-bottom: 4px;
@@ -52,6 +52,7 @@
     color: #999999;
     @media screen and (max-width: 500px){
       flex-wrap: wrap;
+      position: relative;
     }
     a {
       font-size: 12px;
